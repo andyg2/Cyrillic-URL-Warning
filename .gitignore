@@ -1,0 +1,14 @@
+# Build artifacts
+/Web/*.pem
+/Web/*.crx
+/Web/*.zip
+
+# IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs
+*.log

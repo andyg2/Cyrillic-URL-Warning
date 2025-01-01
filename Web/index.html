@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrillic URL Detector - Browser Security Extension</title>
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --danger-color: #ff4444;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #1976D2);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .warning-demo {
+            background-color: var(--danger-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .installation-steps {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .installation-steps ol {
+            padding-left: 1.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            margin-top: 3rem;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛡️ Cyrillic URL Detector</h1>
+        <p>Protect yourself from sophisticated phishing attempts using Cyrillic letters in URLs</p>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>What is Cyrillic URL Detector?</h2>
+            <p>
+                This browser extension protects you against sophisticated phishing attacks that exploit Unicode characters. Attackers often create fake URLs by replacing Latin letters with visually identical Cyrillic characters. For example, the Latin 'a' (U+0061) looks identical to the Cyrillic 'а' (U+0430), but they're different characters that lead to different websites.
+            </p>
+        </section>
+
+        <section class="feature-grid">
+            <div class="feature-card">
+                <h3>🔍 Real-Time Protection</h3>
+                <p>Continuously monitors URLs as you browse, protecting you even in modern Single Page Applications (SPAs) where pages update dynamically.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚠️ Visual Warnings</h3>
+                <p>Displays a prominent red warning bar at the top of the page when Cyrillic characters are detected in the URL.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 User-Friendly</h3>
+                <p>Non-intrusive warnings that can be easily dismissed, while maintaining vigilant protection.</p>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>How it Works</h2>
+            <p>When you visit a webpage containing Cyrillic characters in its URL, you'll immediately see this warning banner:</p>
+            <div class="warning-demo">
+                ⚠️ Warning: This URL contains Cyrillic characters. It might be a phishing attempt.
+            </div>
+            <p>For example, these URLs might look identical, but one uses Cyrillic characters:</p>
+            <div class="code-block">
+                Safe: example.com (Using standard Latin 'e')<br>
+                Dangerous: еxample.com (Using Cyrillic 'е' - a completely different character)
+            </div>
+            <p>While some Cyrillic URLs are legitimate (like Russian websites), be extra cautious when seeing Cyrillic characters in URLs of international websites or financial institutions.</p>
+        </section>
+
+        <section class="installation-steps">
+            <h2>Installation Guide</h2>
+            <ol>
+                <li>Download the <a href="./Cyrillic-URL-Warning.crx">extension</a> or <a href="./Cyrillic-URL-Warning.zip">zip</a> file</li>
+                <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+                <li>Enable "Developer mode" using the toggle in the top right</li>
+                <li>Click "Load unpacked" and select the extension directory</li>
+                <li>The extension will automatically start protecting you!</li>
+                <li>The plugin actively monitors URLs for safety:
+                    <div class="code-block">
+                        Example of a legitimate Cyrillic URL (Russian Wikipedia): 
+                        <a href="https://ru.wikipedia.org/wiki/Россия">https://ru.wikipedia.org/wiki/Россия</a>
+                        <br>This is a legitimate Russian website using Cyrillic characters as expected. The extension will show a warning, but since this is a known Russian domain, it's safe to proceed.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Technical Details</h2>
+            <p>The extension works by:</p>
+            <ul>
+                <li>Monitoring the current page URL</li>
+                <li>Checking for characters in the Unicode range U+0400 to U+04FF (Cyrillic script)</li>
+                <li>Properly handling URL-encoded characters</li>
+                <li>Injecting a warning banner when Cyrillic characters are detected</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Protect yourself from sophisticated phishing attacks with Cyrillic URL Detector</p>
+            <p class="last-updated">Last updated: January 1, 2025</p>
+            <p>&copy; 2025 Andy Gee</p>
+        </footer>
+    </div>
+</body>
+</html>
