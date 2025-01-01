@@ -11,7 +11,7 @@ A browser extension that helps protect against phishing attempts by detecting Cy
 
 ## Installation
 
-1. Download the [extension](https://yourusername.github.io/Cyrillic-URL-Warning/Cyrillic-URL-Warning.crx) or [source code](https://yourusername.github.io/Cyrillic-URL-Warning/Cyrillic-URL-Warning.zip)
+1. Download the [extension](https://dgte.pro/plugins/Cyrillic-URL-Detector/Cyrillic-URL-Warning.crx) or [source code](https://dgte.pro/plugins/Cyrillic-URL-Detector/Cyrillic-URL-Warning.zip)
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
 4. Click "Load unpacked" and select this directory
@@ -20,7 +20,7 @@ A browser extension that helps protect against phishing attempts by detecting Cy
 
 ```
 .
-├── docs/               # GitHub Pages website
+├── web/               # GitHub Pages website
 │   ├── index.html     # Landing page
 │   └── assets/        # Web assets
 ├── src/               # Extension source code
@@ -52,4 +52,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Security
 
-If you discover a security vulnerability, please send an email to [your-email]. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability, please send an email to [rehit.it@gmail.com]. All security vulnerabilities will be promptly addressed.

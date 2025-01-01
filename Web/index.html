@@ -96,12 +96,32 @@
             color: #666;
             font-size: 0.9rem;
         }
+
+        .download-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .download-button:hover {
+            background-color: #1976D2;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>🛡️ Cyrillic URL Detector</h1>
         <p>Protect yourself from sophisticated phishing attempts using Cyrillic letters in URLs</p>
+        <div>
+            <a href="./assets/Cyrillic-URL-Warning.crx" class="download-button">Download Extension</a>
+            <a href="./assets/Cyrillic-URL-Warning.zip" class="download-button">Download Zipfile</a>
+            <a href="https://github.com/andyg2/Cyrillic-URL-Warning" class="download-button">View on GitHub</a>
+        </div>
     </div>
 
     <div class="container">
@@ -144,11 +164,11 @@
         <section class="installation-steps">
             <h2>Installation Guide</h2>
             <ol>
-                <li>Download the <a href="./Cyrillic-URL-Warning.crx">extension</a> or <a href="./Cyrillic-URL-Warning.zip">zip</a> file</li>
+                <li>Download the <a href="Cyrillic-URL-Warning.crx">extension</a> or <a href="Cyrillic-URL-Warning.zip">source code</a></li>
                 <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
                 <li>Enable "Developer mode" using the toggle in the top right</li>
                 <li>Click "Load unpacked" and select the extension directory</li>
-                <li>The extension will automatically start protecting you!</li>
+                <li>The extension will automatically start protecting you</li>
                 <li>The plugin actively monitors URLs for safety:
                     <div class="code-block">
                         Example of a legitimate Cyrillic URL (Russian Wikipedia): 
@@ -173,7 +193,6 @@
         <footer>
             <p>Protect yourself from sophisticated phishing attacks with Cyrillic URL Detector</p>
             <p class="last-updated">Last updated: January 1, 2025</p>
-            <p>&copy; 2025 Andy Gee</p>
         </footer>
     </div>
 </body>

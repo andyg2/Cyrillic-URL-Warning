@@ -1,7 +1,5 @@
 # Build artifacts
-/Web/*.pem
-/Web/*.crx
-/Web/*.zip
+/Web/assets/*.pem
 
 # IDE and OS files
 .DS_Store
